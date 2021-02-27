@@ -12,6 +12,8 @@
     require_once("models/Curso.php");
     $cursodestacado = new Curso();
     $curdx = $cursodestacado->get_curso_destacado();
+
+    $curx = $cursodestacado->get_curso();
 ?>
 
 <!DOCTYPE html>
@@ -214,9 +216,14 @@
                                         <a class="img-link" href="<?php echo $curdx[$i]["cur_url"] ?>" target="_blank"></a>
                                         <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
                                             <div class="entry-meta meta-0 font-small mb-20">
-                                                <a href="#"><span class="post-cat text-white text-uppercase">PHP</span></a>
-                                                <a href="#"><span class="post-cat text-white text-uppercase">HTML5</span></a>
-                                                <a href="#"><span class="post-cat text-white text-uppercase">MySql</span></a>
+                                                <?php
+                                                    $datos = $cursodestacado->get_curso_x_etiqueta($curdx[$i]["cur_id"]);
+                                                    foreach($datos as $row){
+                                                ?>
+                                                    <a href="#"><span class="post-cat text-info text-uppercase"><?php echo $row["det_nom"] ?></span></a>
+                                                <?php
+                                                    }
+                                                ?>
                                             </div>
                                             <h3 class="post-title font-weight-900 mb-20">
                                                 <a class="text-white" href="#"><?php echo $curdx[$i]["cur_titulo"] ?></a>
@@ -232,121 +239,41 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php
+                        for($i=0;$i<sizeof($curx);$i++){
+                    ?>
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
                         <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-1.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/banner/<?php echo $curx[$i]["cur_img"] ?>)">
+                                <a class="img-link" href="<?php echo $curx[$i]["cur_url"] ?>" target="_blank"></a>
                             </div>
                             <div class="post-content p-30">
                                 <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-info">Travel</span></a>
-                                    <a href="category.html"><span class="post-cat text-success">Food</span></a>
+                                    <?php
+                                        $datos = $cursodestacado->get_curso_x_etiqueta($curx[$i]["cur_id"]);
+                                        foreach($datos as $row){
+                                    ?>
+                                        <a href="#"><span class="post-cat text-info text-uppercase"><?php echo $row["det_nom"] ?></span></a>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                                 <div class="d-flex post-card-content">
                                     <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Want fluffy Japanese pancakes but can’t fly to Tokyo?</a>
+                                        <a href="<?php echo $curx[$i]["cur_url"] ?>" target="_blank"><?php echo $curx[$i]["cur_titulo"] ?></a>
                                     </h5>
                                     <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">27 August</span>
-                                        <span class="time-reading has-dot">12 mins read</span>
-                                        <span class="post-by has-dot">23k views</span>
+                                        <span class="post-on"><?php echo date("d/m/Y",strtotime($curx[$i]["fech_crea"])) ?></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-7.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-warning">Fashion</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Put Yourself in Your Customers Shoes</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">17 July</span>
-                                        <span class="time-reading has-dot">8 mins read</span>
-                                        <span class="post-by has-dot">12k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-9.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-danger">Travel</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Life and Death in the Empire of the Tiger</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">7 August</span>
-                                        <span class="time-reading has-dot">15 mins read</span>
-                                        <span class="post-by has-dot">500 views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.4s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-11.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <span class="top-right-icon bg-info"><i class="elegant-icon icon_headphones"></i></span>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-success">Lifestyle</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">When Two Wheels Are Better Than Four</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">15 Jun</span>
-                                        <span class="time-reading has-dot">9 mins read</span>
-                                        <span class="post-by has-dot">1.2k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    <?php
+                        }
+                    ?>
+
                 </div>
             </div>
         </div>
