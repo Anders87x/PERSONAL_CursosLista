@@ -22,11 +22,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cursos - AnderCode</title>
+    <title>AnderCode::Cursos</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets\imgs\theme\favicon.png">
-    <!-- Listado CSS  -->
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\widgets.css">
     <link rel="stylesheet" href="assets\css\responsive.css">
@@ -34,90 +33,21 @@
 
 <body>
     <div class="scroll-progress primary-bg"></div>
-    <!-- Start Preloader -->
+
     <div class="preloader text-center">
         <div class="circle"></div>
     </div>
-    <!--Offcanvas sidebar-->
+
     <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
         <button class="off-canvas-close"><i class="elegant-icon icon_close"></i></button>
-        <div class="sidebar-inner">
-            <!--Latest-->
-            <div class="sidebar-widget widget-latest-posts mb-50">
-                <div class="widget-header-2 position-relative mb-30">
-                    <h5 class="mt-5 mb-30">Don't miss</h5>
-                </div>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post">
-                        <li class="mb-30">
-                            <div class="d-flex hover-up-2 transition-normal">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                    <a class="color-white" href="single.html">
-                                        <img src="assets\imgs\news\thumb-1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The Life of a Travel Writer with David Farley</a></h6>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">05 August</span>
-                                        <span class="post-by has-dot">300 views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-30">
-                            <div class="d-flex hover-up-2 transition-normal">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                    <a class="color-white" href="single.html">
-                                        <img src="assets\imgs\news\thumb-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Why Don’t More Black American Women Travel Solo?</a></h6>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">12 August</span>
-                                        <span class="post-by has-dot">23k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-30">
-                            <div class="d-flex hover-up-2 transition-normal">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                    <a class="color-white" href="single.html">
-                                        <img src="assets\imgs\news\thumb-3.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The 22 Best Things to See and Do in Bangkok</a></h6>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">27 August</span>
-                                        <span class="post-by has-dot">23k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--Ads-->
-            <div class="sidebar-widget widget-ads">
-                <div class="widget-header-2 position-relative mb-30">
-                    <h5 class="mt-5 mb-30">Advertise banner</h5>
-                </div>
-                <a href="https://themeforest.net/user/alithemes/portfolio" target="_blank">
-                    <img class="advertise-img border-radius-5" src="assets\imgs\ads\ads-1.jpg" alt="">
-                </a>
-            </div>
-        </div>
     </aside>
-    <!-- Start Header -->
+
     <header class="main-header header-style-1 font-heading">
         <div class="header-top">
             <div class="container">
                 <div class="row pt-20 pb-20">
                     <div class="col-md-3 col-xs-6">
-                        <a href="#"><img class="logo" src="assets\imgs\theme\logo.png" alt=""></a>
+                        <a href="#"><strong>Anderson Bastidas</strong></a>
                     </div>
                 </div>
             </div>
@@ -127,7 +57,6 @@
                 <div class="mobile_menu d-lg-none d-block"></div>
                 <div class="main-nav d-none d-lg-block float-left">
                     <nav>
-                        <!--Desktop menu-->
                         <ul class="main-menu d-none d-lg-inline font-small">
                             <li><a href="#">Inicio</a> </li>
                             <?php
@@ -138,7 +67,7 @@
                                 }
                             ?>
                         </ul>
-                        <!--Mobile menu-->
+
                         <ul id="mobile-menu" class="d-block d-lg-none text-muted">
                             <li><a href="#">Inicio</a> </li>
                             <?php
@@ -172,10 +101,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
-                        <p class="text-muted"><span class="typewrite d-inline" data-period="2000" data-type='[ " Desarrollador Web. ", "Analista de Sistemas. ", "FullStack " ]'></span></p>
+                        <p class="text-muted"><span class="typewrite d-inline" data-period="2000" data-type='[ "Desarrollador Web.", "Analista de Sistemas.", "FullStack" ]'></span></p>
                         <h2>Hola, Soy <span>Anderson</span></h2>
-                        <h3 class="mb-20"> Bienvenidos a mi web</h3>
-                        <h5 class="text-muted">Accede a todos los cursos que requieras</h5>
+                        <h3 class="mb-20"> Bienvenidos a mi sitio web</h3>
+                        <h5 class="text-muted">Aquí podrás encontrar todos mis cursos, contenido gratuito y otras cosas que pueden interesarte mucho!</h5>
                     </div>
                     <div class="col-lg-6 text-right d-none d-lg-block">
                         <img src="assets\imgs\authors\featured.png" alt="">
@@ -188,7 +117,7 @@
                 <div class="widget-header-3">
                     <div class="row align-self-center">
                         <div class="col-md-4 align-self-center">
-                            <h5 class="widget-title">Cursos</h5>
+                            <h5 class="widget-title">Cursos Destacados</h5>
                         </div>
                         <div class="col-md-8 text-md-right font-small align-self-center">
                             <p class="d-inline-block mr-5 mb-0"><i class="elegant-icon  icon_tag_alt mr-5 text-muted"></i>Etiquetas:</p>
@@ -263,8 +192,10 @@
                                     <h5 class="post-title mb-20 font-weight-900">
                                         <a href="<?php echo $curx[$i]["cur_url"] ?>" target="_blank"><?php echo $curx[$i]["cur_titulo"] ?></a>
                                     </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                    <div class="entry-meta meta-1 float-left text-uppercase">
                                         <span class="post-on"><?php echo date("d/m/Y",strtotime($curx[$i]["fech_crea"])) ?></span>
+                                        <span class="time-reading has-dot text-danger"><strong><?php echo $curx[$i]["cur_server"] ?></strong></span>
+                                        <span class="post-by has-dot text-success"><strong><?php echo $curx[$i]["cur_precio"] ?></strong></span>
                                     </div>
                                 </div>
                             </div>
@@ -278,9 +209,7 @@
             </div>
         </div>
     </main>
-    <!-- End Main content -->
 
-    <!-- Footer Start-->
     <footer class="pt-50 pb-20 bg-grey">
         <div class="container">
             <div class="row">
@@ -302,16 +231,14 @@
                 </div>
             </div>
             <div class="footer-copy-right pt-30 mt-20 wow fadeInUp animated">
-                <p class="float-md-left font-small text-muted">© 2021, Stories - Personal Blog HTML Template </p>
-                <p class="float-md-right font-small text-muted">
-                    Design by <a href="https://alithemes.com" target="_blank">AliThemes</a> | All rights reserved
-                </p>
+                <p class="float-md-left font-small text-muted">© 2021. AnderCode - Anderson Bastidas </p>
+                <p class="float-md-right font-small text-muted">Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
-    <!-- End Footer -->
+
     <div class="dark-mark"></div>
-    <!-- Vendor JS-->
+
     <script src="assets\js\vendor\modernizr-3.5.0.min.js"></script>
     <script src="assets\js\vendor\jquery-1.12.4.min.js"></script>
     <script src="assets\js\vendor\popper.min.js"></script>
@@ -328,7 +255,6 @@
     <script src="assets\js\vendor\perfect-scrollbar.js"></script>
     <script src="assets\js\vendor\waypoints.min.js"></script>
     <script src="assets\js\vendor\jquery.theia.sticky.js"></script>
-    <!-- NewsBoard JS -->
     <script src="assets\js\main.js"></script>
 </body>
 
