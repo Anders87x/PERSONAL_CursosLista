@@ -142,14 +142,14 @@
                                 ?>
                                 <div class="position-relative post-thumb">
                                     <div class="thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/banner/<?php echo $curdx[$i]["cur_img"] ?>)">
-                                        <a class="img-link" href="<?php echo $curdx[$i]["cur_url"] ?>" target="_blank"></a>
+                                        <a class="img-link" href="https://img-a.udemycdn.com/course/750x422/3920432_adac_2.jpg?6hxwsYfpdi3BdHyA3Rl9wKRAwPVEIJPXyfvuRYcQVYWthPU4tNwAAY4b2gYYUu17iTKzfzYerSgpWh8GdRxWTNUwZDubKSUtj5kPlVo0k1jNnyJ-CFWuAMMh_aI4c7S7" target="_blank"></a>
                                         <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
                                             <div class="entry-meta meta-0 font-small mb-20">
                                                 <?php
                                                     $datos = $cursodestacado->get_curso_x_etiqueta($curdx[$i]["cur_id"]);
                                                     foreach($datos as $row){
                                                 ?>
-                                                    <a href="#"><span class="post-cat text-info text-uppercase"><?php echo $row["det_nom"] ?></span></a>
+                                                    <a href="#"><span class="post-cat text-primary text-uppercase"><?php echo $row["det_nom"] ?></span></a>
                                                 <?php
                                                     }
                                                 ?>
